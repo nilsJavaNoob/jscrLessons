@@ -1,1 +1,16 @@
-//
+<script>
+var table = new Array(10);
+//create two dim array like this method
+for(i =0; i<table.length;i++){
+	table[i] = new Array(4);
+}
+//document.write(table);
+//init table
+for(row =0; row<table.length;row++){
+	for(col =0; col<table[row].length;col++){
+		table[row][col] = "<img src='pct/kt2.jpg' width='60' height='60'/>";
+	}
+	//document.write("a");
+}
+document.write(table);
+</script>
