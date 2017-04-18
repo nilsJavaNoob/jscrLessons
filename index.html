@@ -4,13 +4,16 @@ var table = new Array(10);
 for(i =0; i<table.length;i++){
 	table[i] = new Array(4);
 }
-//document.write(table);
+
 //init table
 for(row =0; row<table.length;row++){
 	for(col =0; col<table[row].length;col++){
-		table[row][col] = "<img src='pct/kt2.jpg' width='60' height='60'/>";
+	  if((row + col)%2==1)
+		table[row][col] = "<img src='pct/kt.jpg' width='60' height='60'/>";
+    else table[row][col] = "<img src='pct/kt2.jpg' width='60' height='60'/>";
+
 	}
-	//document.write("a");
+		
 }
 document.write(table);
 </script>
