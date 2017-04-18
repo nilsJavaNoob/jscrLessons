@@ -27,17 +27,63 @@ document.write("<p>instance.propertyA = "+instance.propertyA );
 document.write("<p>instance.propertyB = "+instance.propertyB );
 document.write("<hr/>");
 document.write("<p>instance ="+instance.toString());
-//======другой способ создания объекта
+//======другой способ создания объекта(через конструктор) ====
 var point = new Object();
+//создаем свойство и присваиваем значение
 point.x = 10;
 point.y =15;
-//adding method to object
+//добавляем к объекту метод
 point.f = function(){
 document.write("<p>x = " + point.x + "<p>y = " + point.y);
 
 }
 point.f();
 document.write("<hr/>");
+//пример с более понятными именами
+var person = {
+ firstName: "Jim",
+ lastName: "Rainbow",
+ age:  30,
+ occupation: "WebLev"
+};
+document.write("<p>" + person.firstName +" "+ person.lastName);
+person.age = 25;
+document.write("<p>Age" + person.age + " years old");
+//вложенные объекты
+var human = {
+	firstName: "Alex",
+	lastName: "Jasun",
+	age: 27,
+	occupation:{
+		company: "Microsoft",
+		position: "Web dev"
+	},
+//метод в блоке иннициализации
+     show: function(){
+ 	document.write(" <P>Here is... ");
+	document.write("<p>FirstName" +  human.firstName);
+document.write("<p>LastName" + human.lastName);
+document.write("<p>Age " + human.age + " years old");
+//обращение к вложенному объекту
+document.write("<p>okkupation" + human.occupation.company);
+document.write("<p>okkupation" + human.occupation.position);
+
+},
+	changeWork: function(position){
+	  this.occupation.position = position;
+}
+	   
+};//human
+human.show();
+human.changeWork("CopyWriter");
+human.show();
+//============== ещё один метод создания объекта ===
+var builder = new Object();
+builder.createRoof() = function(){
+document.write("<img src = 'Images/First'>okkupation" + human.occupation.position);
+
+}
+
 //=======
 
 </script>
