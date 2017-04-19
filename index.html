@@ -13,7 +13,7 @@ for(row =0; row<table.length;row++){
     else table[row][col] = "<img src='pct/kt2.jpg' width='60' height='60'/>";
 
 	}
-<<<<<<< HEAD
+
 	
 }
 table[4][1]= "<img src='pct/kt3.jpg' width='60' height='60'/>";
@@ -34,7 +34,7 @@ document.write("<p><b>Значение которое возвращает метод - join('|')</b>");
 document.write("</br></br>");
 var res = arr.join('|');
 document.write("<p>"+res);
-document.write("<p><b>Значение которое возвращает метод - join(< br/ >)</b>");
+document.write("<p><b>The value thah method join is returninig(< br/ >)</b>");
 res = arr.join("<br/>");
 document.write("<p>"+res);
 <!--//========arr.join("<ul> <li>")=== -->
@@ -56,13 +56,13 @@ document.write("<p>"+a);
 document.write("<hr>");
 document.write("<p> example<br>");
 var b =[4,5,6];
-var input = prompt("Введите новое число в массив");
+var input = prompt("type the new value");
 while(input!=null){
 	b= b.concat(input);
-	input = prompt("Введите новое число в массив");
+	input = prompt("Type the new value to an array");
 } 
 document.write(b.join("<br/>"));
-//========== reverse(); ведёт себя непонятно ?????
+//========== reverse(); this function dosn't work correctly
 document.write("<hr>");
 document.write("<p> reverse()<br>");
 var arr4 = new Array(1,2,3,4,5,6,7);
@@ -70,45 +70,45 @@ arr4.reverse();
 document.write(a.join("<br/>"));
 //=====slice()method========
 var s = [1,2,3,4,5,6,7];
-//возвращает первые три элемента 1,2,3
+//return the first three elements 1,2,3
 var temp = a.slice(0,3);
 document.write("<p>" + temp);
-//===возвращает подмассив от указанного индекса
+//===return the subarray from pointed index
 temp = a.slice(3);
 document.write("<p>" + temp);
-// если аргумент отрицательный - он задает позицию относительно конца массива
+//  if argument is negative,position will be from end of array
 temp = a.slice(1,-1);
 document.write("<p>"+ temp);
 
-</script>
-=======
+
+//=======
 		
-}
-document.write(table);
-//======1-Р№ СЃРїРѕСЃРѕР± СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚Р°
+
+//document.write(table);
+//======CREATING the object in initialization block
 var instance = {propertyA: 222, propertyB: 400};
 document.write("<p>instance.propertyA = "+instance.propertyA );
 document.write("<p>instance.propertyB = "+instance.propertyB );
-//РџСЂРёСЃРІРѕРµРЅРёРµ РЅРѕРІС‹С… Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІР°Рј
+//init new values to propertyes
 instance.propertyA = 333;
 instance["propertyB"] = 555;
 document.write("<p>instance.propertyA = "+instance.propertyA );
 document.write("<p>instance.propertyB = "+instance.propertyB );
 document.write("<hr/>");
 document.write("<p>instance ="+instance.toString());
-//======РґСЂСѓРіРѕР№ СЃРїРѕСЃРѕР± СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚Р°(С‡РµСЂРµР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ) ====
+//======here's an other way to create object ====
 var point = new Object();
-//СЃРѕР·РґР°РµРј СЃРІРѕР№СЃС‚РІРѕ Рё РїСЂРёСЃРІР°РёРІР°РµРј Р·РЅР°С‡РµРЅРёРµ
+//obrascenie to object's propertyes
 point.x = 10;
 point.y =15;
-//РґРѕР±Р°РІР»СЏРµРј Рє РѕР±СЉРµРєС‚Сѓ РјРµС‚РѕРґ
+//adding the function 
 point.f = function(){
 document.write("<p>x = " + point.x + "<p>y = " + point.y);
 
 }
 point.f();
 document.write("<hr/>");
-//РїСЂРёРјРµСЂ СЃ Р±РѕР»РµРµ РїРѕРЅСЏС‚РЅС‹РјРё РёРјРµРЅР°РјРё
+//example
 var person = {
  firstName: "Jim",
  lastName: "Rainbow",
@@ -118,7 +118,7 @@ var person = {
 document.write("<p>" + person.firstName +" "+ person.lastName);
 person.age = 25;
 document.write("<p>Age" + person.age + " years old");
-//РІР»РѕР¶РµРЅРЅС‹Рµ РѕР±СЉРµРєС‚С‹
+//example with nested object
 var human = {
 	firstName: "Alex",
 	lastName: "Jasun",
@@ -127,17 +127,17 @@ var human = {
 		company: "Microsoft",
 		position: "Web dev"
 	},
-//РјРµС‚РѕРґ РІ Р±Р»РѕРєРµ РёРЅРЅРёС†РёР°Р»РёР·Р°С†РёРё
+//adding the method show to human
      show: function(){
  	document.write(" <P>Here is... ");
 	document.write("<p>FirstName" +  human.firstName);
 document.write("<p>LastName" + human.lastName);
 document.write("<p>Age " + human.age + " years old");
-//РѕР±СЂР°С‰РµРЅРёРµ Рє РІР»РѕР¶РµРЅРЅРѕРјСѓ РѕР±СЉРµРєС‚Сѓ
+//vivod info from nested property
 document.write("<p>okkupation" + human.occupation.company);
 document.write("<p>okkupation" + human.occupation.position);
 
-},
+},//show,
 	changeWork: function(position){
 	  this.occupation.position = position;
 }
@@ -146,14 +146,72 @@ document.write("<p>okkupation" + human.occupation.position);
 human.show();
 human.changeWork("CopyWriter");
 human.show();
-//============== РµС‰С‘ РѕРґРёРЅ РјРµС‚РѕРґ СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚Р° ===
+//============== Vtoroy variant - otdelno sozdaem objekt a potom otdelno  methody bez scobok ===
 var builder = new Object();
-builder.createRoof() = function(){
-document.write("<img src = 'pct/First'>okkupation" + human.occupation.position);
 
+builder.createRoof = function(){
+document.write("<br>");	
+document.write("<img src = 'pct/roof.gif'/><br/>");
+};
+
+builder.createFirstFloor = function(){
+document.write("<img src = 'pct/firstFloor.gif'/><br/>");
+};
+
+builder.createSecondFloor = function(){
+document.write("<img src = 'pct/secondFloor.gif'/><br/>");
 }
 
-//=======
+builder.createBasement = function(){
+document.write("<img src = 'pct/basement.gif'/><br/>");
+}
+
+builder.createRoof();
+builder.createFirstFloor();
+builder.createSecondFloor();
+builder.createBasement();
+//======= konstrukcia for i using for perebor elementov ======
+var house = {
+	//thirdFloor:"<img src='pct/thirdFloor.gif/><br>",
+	roof:"<img src='pct/roof.gif/><br>",
+	secFloor:"<img src='pct/ secFloor.gif'/><br>",
+	firstFloor:"<img src='pct/ firstFloor.gif'/><br>",
+	basement:"<img src='pct/ basement.gif'/><br>",
+	address:"<p style' color:green'>UK. London. Muswell Hill. N10 <hr/>"
+	
+}
+for(el in house){
+	if("thirdFloor" in house)
+	document.write(house[el]+"3");
+	else document.write(house[el]+ "a");
+}
+//using keyword "delete"
+if("secFloor" in house){
+	delete house.secondFloor;
+}
+for(el in house){
+	if("thirdFloor" in house)
+	document.write(house[el]+"3");
+	else document.write(house[el]);
+}
+//using keyword "delete" for array
+var array = new Array(1,2,3,4,5,6,7);
+document.write("<p> Array before deleting" + array.join(","));
+var ind = prompt("Point index to delete" + array.join(","));
+delete array[ind];
+document.write("<p>Array after deleting" + array.join(","));
+//using "with" operator
+document.write("<hr>");
+with(house){
+	document.write(roof);
+	document.write(secFloor);
+	document.write(firstFloor);
+	document.write(basement);
+}
+//testing perebor for navigator object
+//for(el in navigator){
+	//document.write(el + " = " + navigator[el] + "<br>");
+//}
 
 </script>
->>>>>>> a71f42b6ceb95c29685b79265666a204e47470d6
+
