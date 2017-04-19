@@ -10,7 +10,69 @@ for(row =0; row<table.length;row++){
 	for(col =0; col<table[row].length;col++){
 		table[row][col] = "<img src='pct/kt2.jpg' width='60' height='60'/>";
 	}
-	//document.write("a");
+	
 }
-document.write(table);
+table[4][1]= "<img src='pct/kt3.jpg' width='60' height='60'/>";
+for(row = 0; row < table.length; row++){
+	for(col=0; col<table[row].length;col++){
+	  document.write(table[row][col]);	
+	}
+  document.write("<br/>");	
+}
+var str = table[3][2];
+document.write("<hr/>" + str);
+document.write("<hr/>");
+var arr = ["september","october","november","desember","january","february","march","april","may","june","julySub","ougust",];
+
+document.write(arr);
+document.write("<p><b>«начение которое возвращает метод - join('|')</b>");
+
+document.write("</br></br>");
+var res = arr.join('|');
+document.write("<p>"+res);
+document.write("<p><b>«начение которое возвращает метод - join(< br/ >)</b>");
+res = arr.join("<br/>");
+document.write("<p>"+res);
+<!--//========arr.join("<ul> <li>")=== -->
+document.write("<hr>");
+//var arr2 = ["september","october","november","desember","january","february","march","april","may","june","july","ougust"];
+document.write("<ul> <li>");
+var res2 = arr.join("<li><li>");
+document.write(res2);
+document.write("</li></ul>");
+//========arr.concat();=======
+document.write("<hr>");
+document.write("<p> method concat()");
+var a=[1,2,3];
+a = a.concat(4,5);
+document.write("<p>"+a);
+a = a.concat(6,7,[8,9]);
+document.write("<p>"+a);
+//EXAMPLE		
+document.write("<hr>");
+document.write("<p> example<br>");
+var b =[4,5,6];
+var input = prompt("¬ведите новое число в массив");
+while(input!=null){
+	b= b.concat(input);
+	input = prompt("¬ведите новое число в массив");
+} 
+document.write(b.join("<br/>"));
+//========== reverse(); ведЄт себ€ непон€тно ?????
+document.write("<hr>");
+document.write("<p> reverse()<br>");
+var arr4 = new Array(1,2,3,4,5,6,7);
+arr4.reverse();
+document.write(a.join("<br/>"));
+//=====slice()method========
+var s = [1,2,3,4,5,6,7];
+//возвращает первые три элемента 1,2,3
+var temp = a.slice(0,3);
+document.write("<p>" + temp);
+//===возвращает подмассив от указанного индекса
+temp = a.slice(3);
+document.write("<p>" + temp);
+// если аргумент отрицательный - он задает позицию относительно конца массива
+temp = a.slice(1,-1);
+document.write("<p>"+ temp);
 </script>
