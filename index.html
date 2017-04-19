@@ -4,12 +4,16 @@ var table = new Array(10);
 for(i =0; i<table.length;i++){
 	table[i] = new Array(4);
 }
-//document.write(table);
+
 //init table
 for(row =0; row<table.length;row++){
 	for(col =0; col<table[row].length;col++){
-		table[row][col] = "<img src='pct/kt2.jpg' width='60' height='60'/>";
+	  if((row + col)%2==1)
+		table[row][col] = "<img src='pct/kt.jpg' width='60' height='60'/>";
+    else table[row][col] = "<img src='pct/kt2.jpg' width='60' height='60'/>";
+
 	}
+<<<<<<< HEAD
 	
 }
 table[4][1]= "<img src='pct/kt3.jpg' width='60' height='60'/>";
@@ -77,3 +81,79 @@ temp = a.slice(1,-1);
 document.write("<p>"+ temp);
 
 </script>
+=======
+		
+}
+document.write(table);
+//======1-й способ создания объекта
+var instance = {propertyA: 222, propertyB: 400};
+document.write("<p>instance.propertyA = "+instance.propertyA );
+document.write("<p>instance.propertyB = "+instance.propertyB );
+//Присвоение новых значений свойствам
+instance.propertyA = 333;
+instance["propertyB"] = 555;
+document.write("<p>instance.propertyA = "+instance.propertyA );
+document.write("<p>instance.propertyB = "+instance.propertyB );
+document.write("<hr/>");
+document.write("<p>instance ="+instance.toString());
+//======другой способ создания объекта(через конструктор) ====
+var point = new Object();
+//создаем свойство и присваиваем значение
+point.x = 10;
+point.y =15;
+//добавляем к объекту метод
+point.f = function(){
+document.write("<p>x = " + point.x + "<p>y = " + point.y);
+
+}
+point.f();
+document.write("<hr/>");
+//пример с более понятными именами
+var person = {
+ firstName: "Jim",
+ lastName: "Rainbow",
+ age:  30,
+ occupation: "WebLev"
+};
+document.write("<p>" + person.firstName +" "+ person.lastName);
+person.age = 25;
+document.write("<p>Age" + person.age + " years old");
+//вложенные объекты
+var human = {
+	firstName: "Alex",
+	lastName: "Jasun",
+	age: 27,
+	occupation:{
+		company: "Microsoft",
+		position: "Web dev"
+	},
+//метод в блоке иннициализации
+     show: function(){
+ 	document.write(" <P>Here is... ");
+	document.write("<p>FirstName" +  human.firstName);
+document.write("<p>LastName" + human.lastName);
+document.write("<p>Age " + human.age + " years old");
+//обращение к вложенному объекту
+document.write("<p>okkupation" + human.occupation.company);
+document.write("<p>okkupation" + human.occupation.position);
+
+},
+	changeWork: function(position){
+	  this.occupation.position = position;
+}
+	   
+};//human
+human.show();
+human.changeWork("CopyWriter");
+human.show();
+//============== ещё один метод создания объекта ===
+var builder = new Object();
+builder.createRoof() = function(){
+document.write("<img src = 'pct/First'>okkupation" + human.occupation.position);
+
+}
+
+//=======
+
+</script>
+>>>>>>> a71f42b6ceb95c29685b79265666a204e47470d6
